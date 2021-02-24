@@ -1,11 +1,10 @@
 import './App.scss';
-import FloatingBox from './components/FloatingBox';
+import { FloatingBox, BackgroundTimer } from './components';
 
 function App() {
-  const timer = new Date().getFullYear();
-
   return (
-    <div>
+    <div className="wrapper">
+      <BackgroundTimer />
       <FloatingBox />
     </div>
   );

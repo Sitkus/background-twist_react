@@ -1,0 +1,19 @@
+.box {
+  padding: 3rem;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+
+  &__top-text {
+  }
+
+  &__bot-text {
+  }
+
+  &__timer {
+    // color: white;
+  }
+
+  &--hidden {
+    visibility: hidden;
+  }
+}
