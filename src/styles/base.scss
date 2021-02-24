@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  #Colors
+\*------------------------------------*/
+
+:root {
+  --dark-blue: #282c34;
+  --light-blue: #61dafb;
+}
+
+/*------------------------------------*\
+  #Default settings
+\*------------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  background-color: var(--dark-blue);
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  overflow-y: scroll;
+}
+
+body {
+  color: var(--light-blue);
+  font-size: 1.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
