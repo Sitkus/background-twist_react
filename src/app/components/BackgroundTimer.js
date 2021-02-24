@@ -4,20 +4,20 @@ import './BackgroundTimer.scss';
 function BackgroundTimer() {
   const [timer, setTimer] = useState(0);
 
+  function getRandomRGBColor() {
+    const rgb = [];
+
+    for (let i = 0; i < 3; i++) {
+      rgb.push(Math.floor(Math.random() * Math.floor(256)));
+    }
+
+    return `rgb(${rgb.join(', ')})`;
+  }
+
   useEffect(() => {
     const countup = setInterval(() => {
       setTimer(timer + 1);
     }, 1000);
-
-    function getRandomRGBColor() {
-      const rgb = [];
-
-      for (let i = 0; i < 3; i++) {
-        rgb.push(Math.floor(Math.random() * Math.floor(256)));
-      }
-
-      return `rgb(${rgb.join(', ')})`;
-    }
 
     return function cleanup() {
       if (timer === 30) {

@@ -6,27 +6,34 @@ function FloatingBox() {
   const [timer, setTimer] = useState(5);
 
   useEffect(() => {
-    document.addEventListener('mousemove', showBoxAgain);
+    document.addEventListener('mousemove', resetShowBoxAndTimer);
+    document.addEventListener('keypress', resetShowBoxAndTimer);
 
-    function showBoxAgain() {
+    const countdown = setInterval(() => {
+      setTimer(timer - 1);
+    }, 1000);
+
+    function resetShowBoxAndTimer() {
       if (!showBox) {
         setShowBox(true);
         setTimer(5);
       }
     }
 
-    const countdown = setInterval(() => {
-      setTimer(timer - 1);
-    }, 1000);
-
-    if (timer === 0) {
-      setShowBox(false);
-      clearInterval(countdown);
+    function hideBoxWhenTimerIsZero() {
+      if (timer === 0) {
+        setShowBox(false);
+        clearInterval(countdown);
+      }
     }
+
+    hideBoxWhenTimerIsZero();
 
     return function cleanup() {
       clearInterval(countdown);
-      document.removeEventListener('mousemove', showBoxAgain);
+
+      document.removeEventListener('mousemove', resetShowBoxAndTimer);
+      document.removeEventListener('keypress', resetShowBoxAndTimer);
     };
   }, [showBox, timer]);
 
