@@ -14,10 +14,8 @@ function FloatingBox() {
     }, 1000);
 
     function resetShowBoxAndTimer() {
-      if (!showBox) {
-        setShowBox(true);
-        setTimer(5);
-      }
+      setShowBox(true);
+      setTimer(5);
     }
 
     function hideBoxWhenTimerIsZero() {
