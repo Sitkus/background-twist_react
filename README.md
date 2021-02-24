@@ -4,7 +4,7 @@ This project was part of a given task.
 
 Simple task to make background change on timer and div box to appear on mouse move and dissapear on timer.
 
-<!-- You can check live project here: [netlify](https://netlify-image-search-react.netlify.app/) -->
+You can check live project here: [netlify](https://background-twist-react-task.netlify.app)
 
 ## Available Scripts
 
