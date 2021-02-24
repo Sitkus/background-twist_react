@@ -9,7 +9,7 @@ function BackgroundTimer() {
       setTimer(timer + 1);
     }, 1000);
 
-    const getRandomColor = () => {
+    function getRandomRGBColor() {
       const rgb = [];
 
       for (let i = 0; i < 3; i++) {
@@ -17,11 +17,11 @@ function BackgroundTimer() {
       }
 
       return `rgb(${rgb.join(', ')})`;
-    };
+    }
 
     return function cleanup() {
       if (timer === 30) {
-        document.body.style.backgroundColor = getRandomColor();
+        document.body.style.backgroundColor = getRandomRGBColor();
         setTimer(0);
       }
 

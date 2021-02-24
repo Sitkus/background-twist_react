@@ -1,12 +1,12 @@
-import './App.scss';
 import { FloatingBox, BackgroundTimer } from './components';
+import './App.scss';
 
 function App() {
   return (
-    <div className="wrapper">
+    <main className="main">
       <BackgroundTimer />
       <FloatingBox />
-    </div>
+    </main>
   );
 }
 
